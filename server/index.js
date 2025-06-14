@@ -11,7 +11,7 @@ app.use(express.json());
 
 // Sample route
 app.get('/', (req, res) => {
-  res.send('LankaRail Backend is running 🚆');
+  res.send('LankaRail Backend is running successfully!');
 });
 
 app.listen(PORT, () => {
