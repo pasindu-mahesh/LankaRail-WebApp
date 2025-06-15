@@ -23,7 +23,7 @@ export default function SignupPage() {
             <div className="w-12 h-12 bg-gradient-to-br from-red-600 to-red-700 rounded-xl flex items-center justify-center">
               <Train className="w-7 h-7 text-white" />
             </div>
-            <span className="text-2xl font-bold text-gray-900">TrainTrack LK</span>
+            <span className="text-2xl font-bold text-gray-900">LankaRail.LK</span>
           </Link>
         </div>
 
