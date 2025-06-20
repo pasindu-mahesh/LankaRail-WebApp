@@ -1,20 +1,15 @@
-const express = require('express');
-const dotenv = require('dotenv');
-const connectDB = require('./config/db');
+const express = require("express");
+const dotenv = require("dotenv");
+const connectDB = require("./config/db");
 
-// Load .env variables
 dotenv.config();
-
-// Create app
 const app = express();
-app.use(express.json()); // Middleware to parse JSON
 
-// Connect to MongoDB
+app.use(express.json());
+
 connectDB();
 
-// Import and use auth routes
-const authRoutes = require('./routes/authRoutes'); //  fix name
-app.use('/api/auth', authRoutes); //  your endpoint prefix
+app.use("/api/auth", require("./routes/authRoutes"));
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
