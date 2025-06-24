@@ -28,18 +28,20 @@ export default function SignupPage() {
 
     try {
       setLoading(true)
-      const response = await fetch("/api/auth/signup", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify({
-          name ,
-          email,
-          password,
-          userType
-        })
-      })
+const response = await fetch("http://localhost:5000/api/auth/signup", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json"
+  },
+  body: JSON.stringify({
+    fullName: name,
+    email,
+    password,
+    role: userType
+  })
+})
+
+
 
       const data = await response.json()
 
